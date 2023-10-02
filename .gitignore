@@ -1,0 +1,52 @@
+# Arquivos de compilação Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambiente virtual (por exemplo, criado com virtualenv ou venv)
+venv/
+env/
+
+# Arquivos de configuração e segurança sensíveis
+*.env
+*.ini
+*.conf
+
+# Arquivos de log e diretórios de log
+*.log
+log/
+logs/
+
+# Arquivos de cache
+__pycache__/
+
+# Arquivos de mídia gerados
+media/
+
+# Arquivos de banco de dados
+db.sqlite3
+*.db
+
+# Diretório de saída estática (gerado por collectstatic)
+static/
+
+# Diretório de dados de migração (gerado por makemigrations)
+migrations/
+
+# Arquivos de ambiente local
+.env.local
+
+# Arquivos de backup
+*.bak
+
+# Arquivos gerados por IDEs e editores
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Dependências e diretórios de dependências
+node_modules/
+env/
+venv/
