@@ -13,4 +13,4 @@ def mega(request):
         lista.append(random.randint(1, 60))
         i = i + 1
 
-    return render(request, 'resultado_mega.html', {'lista': lista})
+    return render(request, 'index.html', {'lista': lista})
