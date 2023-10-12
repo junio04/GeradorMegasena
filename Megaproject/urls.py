@@ -5,5 +5,5 @@ from core.views import mega
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',mega, name= 'mega')
+    path('', mega, name= 'mega')
 ]
