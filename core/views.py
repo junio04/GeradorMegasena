@@ -14,3 +14,7 @@ def mega(request):
         i = i + 1
 
     return render(request, 'index.html', {'lista': lista})
+
+
+def error404(request, exception):
+    return render(request, 'error404.html', status=404)

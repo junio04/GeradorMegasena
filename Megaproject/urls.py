@@ -7,6 +7,6 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mega, name= 'mega'),
-    path('404/', TemplateView.as_view(template_name='404.html', name='404'))
+    path('404/', TemplateView.as_view(template_name='erro404.html'))
 
 ]
