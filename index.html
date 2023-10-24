@@ -25,21 +25,7 @@
     </div>
 </div>
 
-<script>
-    document.getElementById('gerar').addEventListener('click', function() {
-        var resultadoDiv = document.getElementById('resultado');
 
-        // Gerar números aleatórios e exibi-los horizontalmente
-        var numeros = [];
-        for (var i = 0; i < 6; i++) {
-            numeros.push(Math.floor(Math.random() * 60) + 1);
-        }
-        document.getElementById('numeros').innerHTML = numeros.join(' - ');
-
-        // Exibir a div de resultado
-        resultadoDiv.style.display = 'block';
-    });
-</script>
 
 </body>
 </html>
