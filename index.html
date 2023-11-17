@@ -1,30 +1,27 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Gerador de Resultado da Megasena</title>
-    <link rel="stylesheet" type="text/css" href="{% styles.css %}">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Gerador de Resultado da Megasena</h1>
+    <h1>Gerador de Resultado da Megasena</h1>
 
-        <form method="post" action="{% url 'mega' %}">
-            {% csrf_token %}
-            <button type="button" id="gerar">Gerar Números</button>
-        </form>
+    <form method="post" action="{% url 'mega' %}">
+        <button type="button" id="gerar">Gerar Números</button>
+    </form>
 
-        <div id="resultado" style="display: none;">
-            <p>Esta é a lista:</p>
-            <ul id="numeros">
-                {% for numero in lista %}
-                    <li>{{ numero }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+    <div id="resultado" style="display: none; margin: 20px auto; text-align: center;">
+        <p style="font-weight: bold;">Esta é a lista:</p>
+        <ul id="numeros" style="list-style: none; padding: 0;">
+            {% for numero in lista %}
+                <li style="background-color: #007BFF; color: white; padding: 5px; margin: 5px; display: inline-block; border-radius: 5px;">{{ numero }}</li>
+            {% endfor %}
+        </ul>
     </div>
+</div>
 
     <script>
         document.getElementById('gerar').addEventListener('click', function() {

@@ -1,51 +1,62 @@
-/* Estilize o corpo da página */
+/* styles.css */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  text-align: center;
-  padding: 20px;
+    background-color: green;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilo para o cabeçalho */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  font-size: 24px;
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
 }
 
-/* Estilo para o formulário */
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
 form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Estilo para os campos de entrada */
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
-/* Estilo para o botão de envio */
-input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+button:hover {
+    background-color: #0056b3;
 }
 
-/* Estilo para a exibição dos números */
-#numbers {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
+#resultado {
+    display: none;
+    margin-top: 20px;
+}
+
+p {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #007BFF;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center; /* Centralizar horizontalmente */
+    line-height: 40px;  /* Ajuste o valor para centralizar verticalmente */
 }
