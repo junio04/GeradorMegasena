@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Resultado da Megasena</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Resultado da Megasena</h1>
+
+        <form method="post" action="{% url 'mega' %}">
+            {% csrf_token %}
+            <button type="button" id="gerar">Gerar Números</button>
+        </form>
+
+        <div id="resultado" style="display: none;">
+            <p>Esta é a lista:</p>
+            <ul id="numeros">
+                {% for numero in lista %}
+                    <li>{{ numero }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('gerar').addEventListener('click', function() {
+            var resultadoDiv = document.getElementById('resultado');
+
+            // Gerar números aleatórios e exibi-los horizontalmente
+            var numeros = [];
+            for (var i = 0; i < 6; i++) {
+                numeros.push(Math.floor(Math.random() * 60) + 1);
+            }
+            document.getElementById('numeros').innerHTML = numeros.join(' - ');
+
+            // Exibir a div de resultado
+            resultadoDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

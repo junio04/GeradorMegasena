@@ -17,4 +17,4 @@ def mega(request):
 
 
 def error404(request, exception):
-    return render(request, 'error404.html', status=404)
+    return render(request, 'error404.styles.css', status=404)
